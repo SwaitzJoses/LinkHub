@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Business Link Hub Admin</title>
+</head>
+<body>
+
+<h1>Create Business</h1>
+
+<input id="name" placeholder="Business Name">
+<br><br>
+
+<input id="description" placeholder="Description">
+<br><br>
+
+<input id="phone" placeholder="Phone Number">
+<br><br>
+
+<button onclick="createBusiness()">
+Create Business
+</button>
+
+<h2>Your Link:</h2>
+<p id="result"></p>
+
+<script>
+function createBusiness() {
+
+  const name =
+    document.getElementById("name").value;
+
+  const slug =
+    name.toLowerCase().replaceAll(" ", "");
+
+  const link =
+    `index.html?business=${slug}`;
+
+  document.getElementById("result")
+    .innerText = link;
+}
+</script>
+
+</body>
+</html>
