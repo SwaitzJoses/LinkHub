@@ -2,36 +2,60 @@
 <html>
 <head>
   <title>Create Business</title>
+  <link rel="stylesheet" href="admin.css">
 </head>
 <body>
 
-<h1>Create Business</h1>
+<div class="container">
+  <h1>🚀 LinkHub Admin</h1>
 
-<input id="name" placeholder="Business Name"><br><br>
-<input id="slug" placeholder="Slug"><br><br>
-<input id="phone" placeholder="Phone"><br><br>
-<input id="description" placeholder="Description"><br><br>
-<input id="logo" placeholder="Logo URL"><br><br>
-<input id="maps" placeholder="Google Maps Link"><br><br>
-<input id="instagram" placeholder="Instagram Link"><br><br>
-<input id="gallery"
-placeholder="Image URLs separated by commas">
-<br><br>
-<input id="theme"
-placeholder="Theme Color (#e91e63)">
-<br><br>
+  <input id="name" placeholder="Business Name">
+  <input id="slug" placeholder="Slug">
+  <input id="phone" placeholder="Phone Number">
+  <input id="description" placeholder="Description">
+  <input type="file" id="logo" accept="image/*">
+  <img
+  id="logoPreview"
+  style="
+    width:120px;
+    height:120px;
+    object-fit:cover;
+    border-radius:20px;
+    display:none;
+    margin-top:15px;
+  "
+>
+  <input id="maps" placeholder="Google Maps Link">
+  <input id="instagram" placeholder="Instagram Link">
+  <input id="gallery" placeholder="Gallery URLs">
+ <select id="theme">
+  <option value="#6a84d2">💙 Royal Blue</option>
+  <option value="#7c3aed">💜 Purple</option>
+  <option value="#2563eb">🔵 Ocean Blue</option>
+  <option value="#db2777">🌸 Pink</option>
+  <option value="#dc2626">❤️ Red</option>
+  <option value="#ea580c">🧡 Orange</option>
+  <option value="#059669">💚 Emerald</option>
+  <option value="#0f766e">🩵 Teal</option>
+  <option value="#1f2937">⚫ Dark Gray</option>
+  <option value="#000000">🖤 Black</option>
+</select>
+  <div class="form-group">
+  
+  <input
+    type="text"
+    id="whatsapp"
+    placeholder="919876543210"
+  >
+</div>
 
-<button id="save">
-Create Business
-</button>
+ <button id="save">Create Business</button>
 
-<button id="copy" style="display:none">
-📋 Copy Link
-</button>
-
-<button id="open" style="display:none">
-  🌐 Open Website
-</button>
+<div class="actions">
+  <button id="copy">📋 Copy Link</button>
+  <button id="open">🌐 Open Website</button>
+</div>
+</div>
 
 <script type="module" src="admin.js"></script>
 
