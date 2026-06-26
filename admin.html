@@ -1,44 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Business Link Hub Admin</title>
+  <title>Create Business</title>
 </head>
 <body>
 
 <h1>Create Business</h1>
 
-<input id="name" placeholder="Business Name">
+<input id="name" placeholder="Business Name"><br><br>
+<input id="slug" placeholder="Slug"><br><br>
+<input id="phone" placeholder="Phone"><br><br>
+<input id="description" placeholder="Description"><br><br>
+<input id="logo" placeholder="Logo URL"><br><br>
+<input id="maps" placeholder="Google Maps Link"><br><br>
+<input id="instagram" placeholder="Instagram Link"><br><br>
+<input id="gallery"
+placeholder="Image URLs separated by commas">
+<br><br>
+<input id="theme"
+placeholder="Theme Color (#e91e63)">
 <br><br>
 
-<input id="description" placeholder="Description">
-<br><br>
-
-<input id="phone" placeholder="Phone Number">
-<br><br>
-
-<button onclick="createBusiness()">
+<button id="save">
 Create Business
 </button>
 
-<h2>Your Link:</h2>
-<p id="result"></p>
+<button id="copy" style="display:none">
+📋 Copy Link
+</button>
 
-<script>
-function createBusiness() {
+<button id="open" style="display:none">
+  🌐 Open Website
+</button>
 
-  const name =
-    document.getElementById("name").value;
-
-  const slug =
-    name.toLowerCase().replaceAll(" ", "");
-
-  const link =
-    `index.html?business=${slug}`;
-
-  document.getElementById("result")
-    .innerText = link;
-}
-</script>
+<script type="module" src="admin.js"></script>
 
 </body>
 </html>

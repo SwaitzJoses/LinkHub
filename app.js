@@ -40,7 +40,36 @@ async function load() {
 
     document.getElementById('instagram').href =
   business.instagram
+
+
+  const gallery =
+  document.getElementById('gallery')
+
+gallery.innerHTML = ''
+
+if (business.gallery) {
+
+  const images =
+    business.gallery.split(',')
+
+  images.forEach(url => {
+
+    const img =
+      document.createElement('img')
+
+    img.src = url.trim()
+    img.width = 120
+    img.style.margin = '10px'
+    img.style.borderRadius = '10px'
+
+    gallery.appendChild(img)
+  })
+}
+
+
 console.log(business.theme_color)
+
+
 document
   .querySelectorAll('a')
   .forEach(button => {
